@@ -1,0 +1,11 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.json({ status: 200 });
+});
+
+router.get('/favicon.ico', (req, res) => res.status(204));
+
+module.exports = router;
