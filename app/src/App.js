@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 class App extends React.Component {
     constructor() {
@@ -9,17 +8,19 @@ class App extends React.Component {
         }
     }
     componentDidMount() {
-        fetch('api/')
+        fetch('api/spotify/tryCatch')
         .then(res => res.json())
         .then(data => this.setState({ data: data }))
         .catch(e => console.log(e))
     }
     render() {
         return (
-        <div className="App">
-            { this.state.data &&
-                <p>{ this.state.data.status }</p>
-            }
+        <div className="App container-fluid">
+            <div className="row">
+                <div className="col-12 p-5">
+                    <p className="">{this.state.data && this.state.data.name}</p>
+                </div>
+            </div>
         </div>
         );
     }
