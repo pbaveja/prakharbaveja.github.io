@@ -1,27 +1,24 @@
 import React from 'react';
+import { Provider } from 'mobx-react';
+import Name from './components/Name'
+import SpotifyStore from './lib/SpotifyStore'
 
 class App extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            data: false
-        }
-    }
-    componentDidMount() {
-        fetch('api/spotify/tryCatch')
-        .then(res => res.json())
-        .then(data => this.setState({ data: data }))
-        .catch(e => console.log(e))
+    constructor(props) {
+        super(props);
+        this.store = new SpotifyStore();
     }
     render() {
         return (
-        <div className="App container-fluid">
-            <div className="row">
-                <div className="col-12 p-5">
-                    <p className="">{this.state.data && this.state.data.name}</p>
+        <Provider spotifyStore={this.store}>
+            <div className="App container-fluid">
+                <div className="row">
+                    <div className="col-12 p-5">
+                        <Name />
+                    </div>
                 </div>
             </div>
-        </div>
+        </Provider>
         );
     }
 }

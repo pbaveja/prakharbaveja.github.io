@@ -7,10 +7,10 @@ var cors = require("cors");
 
 var indexRouter = require('./routes/index');
 var spotifyRouter = require('./routes/spotify');
-// var usersRouter = require('./routes/users');
 
 var app = express();
 
+// Middleware
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
@@ -20,7 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', indexRouter);
 app.use('/api/spotify/', spotifyRouter);
-// app.use('/users', usersRouter);
+
+app.get('/favicon.ico', (req, res) => res.status(204));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var spotifyApi = require('../lib/spotify');
 
-router.get('/tryCatch', function(req, res, next) {
+router.get('/trycatch', function(req, res, next) {
 	// Get tracks in a playlist
 	spotifyApi
 	  .getPlaylist('55kaalmMfuanMgINNafOQ8')
