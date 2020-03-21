@@ -5,16 +5,16 @@ class SpotifyStore {
 	constructor() {
 	    this.apiService = new ApiService();
 	}
-    playlistData = {};
+    playlists = [];
     status = false;
 
-    getPlaylistAsync = async () => {
+    getPlaylistAsync = async (id) => {
         try {
             var params = {};
             const urlParams = new URLSearchParams(Object.entries(params));
-            const data = await this.apiService.get('spotify/trycatch', urlParams)
+            const data = await this.apiService.get('spotify/playlists/'+id, urlParams)
             runInAction(() => {
-                this.playlistData = data;
+                this.playlists.push(data);
             });
         } catch (error) {
             runInAction(() => {
@@ -25,7 +25,7 @@ class SpotifyStore {
 }
 
 decorate(SpotifyStore, {
-    playlistData: observable,
+    playlists: observable,
     searchQuery: observable,
     status: observable
 });

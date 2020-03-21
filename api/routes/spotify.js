@@ -2,10 +2,11 @@ var express = require('express');
 var router = express.Router();
 var spotifyApi = require('../lib/spotify');
 
-router.get('/trycatch', function(req, res, next) {
+router.get('/playlists/:id', function(req, res, next) {
 	// Get tracks in a playlist
+	// res.json({ name: 'my Playlist Name' });
 	spotifyApi
-	  .getPlaylist('55kaalmMfuanMgINNafOQ8')
+	  .getPlaylist(req.params.id)
 	  .then(
 	    function(data) {
 	    	// console.log('The playlist contains these tracks', data.body);
@@ -17,6 +18,6 @@ router.get('/trycatch', function(req, res, next) {
 				error: err
 			});
 	    }
-	  );
+	);
 });
 module.exports = router;
