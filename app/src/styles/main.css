@@ -3,9 +3,112 @@ body {
 	font-family: 'Baloo Chettan 2', 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-weight: 500;
 }
+button:focus { outline: none !important; }
 .font-regular { font-weight: 400; }
 .font-semi-bold { font-weight: 600; }
 .source-code-pro { 
 	font-family: 'Source Code Pro' 
 }
 .letter-spacing-3 { letter-spacing: 0.3em; }
+
+.card-custom {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-custom > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-custom h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-custom p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-custom .card-custom-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-custom-infos .card-custom-user {
+  /*position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;*/
+}
+
+.playlist-play-btn {
+  border: none;
+  padding: 10px 15px;
+  background: none;
+  /*background: radial-gradient(#ababab, transparent);*/
+  border-radius: 50%;
+}
+.playlist-play-btn:hover {
+  transform: scale(1.2);
+  transition: ease all 0.5s
+}
+.track-play-btn {
+  border: none;
+  padding: 10px 15px;
+  background: none;
+  /*background: radial-gradient(#ababab, transparent);*/
+  border-radius: 50%;
+}
+.track-play-btn:hover {
+  transform: scale(1.2);
+  transition: ease all 0.5s
+}
+
+.playlist-track {
+	background: white;
+    padding: 10px;
+    /*box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
+}
+.playlist-artist {
+	font-size: 8px;
+	background: white;
+}
+.playlist-track-details p {
+	font-size: 14px;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.avatar-large {
+  width: 56px;
+  border-radius: 50%;
+}
+
+.avatar-bordered {
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+.avatar-square {
+  width: 40px;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+.text-sm { font-size: 12px; }
+.text-gray { color: #DDD; }
+.text-blue { color: #4661a3; }
