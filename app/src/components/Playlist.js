@@ -2,7 +2,7 @@ import React from "react";
 
 function Card(props) {
 	return (
-		<div onClick={() => { props.handleClick(props.title) } } className="card-custom my-2 rounded">
+		<div onClick={() => { props.handleClick(props.title) } } className="card-custom mt-2 mb-0">
 			<div className="card-custom-infos p-3 rounded">
 				{/*<img src={ props.img } className='img-fluid' style={{maxWidth: '40px'}} alt={props.title} />*/}
 				<div>

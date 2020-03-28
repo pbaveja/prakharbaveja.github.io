@@ -23,14 +23,27 @@ class App extends React.Component {
                         <Name />
                     </div>
                     <div className="col-12 col-md-12 px-5 mt-5 d-flex justify-content-center align-items-center flex-column">
-                        <p>a few of my playlists</p>
+                        
+
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item text-center my-tabs">
+                                <a class="nav-link my-tabs-link text-dark-gray" href="#">Projects</a>
+                            </li>
+                            <li class="nav-item text-center my-tabs border-bottom-black">
+                                <a class="nav-link my-tabs-link text-dark-gray" href="#">Spotify x Me</a>
+                            </li>
+                        </ul>
+
+
+
+
                     </div>
                     
                     <Playlists />
                 </div>
 
             </div>
-                <Footer/>
+            {/* <Footer/> */}
         </Provider>
         );
     }

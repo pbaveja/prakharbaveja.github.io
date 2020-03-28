@@ -29,7 +29,7 @@ class Playlists extends React.Component {
   	const playlists = this.props.spotifyStore.status !== 'error' ? this.props.spotifyStore.playlists : [];
 
     return (
-      <div className='col-12'>
+      <div className='col-12 mt-5'>
       <div className='row justify-content-center'>
         {
         	playlists.map((el) => {
@@ -37,7 +37,7 @@ class Playlists extends React.Component {
         		<div key={el.name} className='col-12 col-sm-6 col-md-4 px-md-2'>
                     <Playlist handleClick={this.handleClick} img={el.images[0].url} title={el.name} description={el.description} />
                     
-                    <TransitionGroup className="track-list">
+                    <TransitionGroup className={(this.state.isOpen && el.name === this.state.playlistToOpen) && "track-list" }>
     					{(this.state.isOpen && el.name === this.state.playlistToOpen) && el.tracks.items.map(track => (
                             <CSSTransition
                               key={track.track.name}
