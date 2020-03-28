@@ -112,3 +112,20 @@ button:focus { outline: none !important; }
 .text-sm { font-size: 12px; }
 .text-gray { color: #DDD; }
 .text-blue { color: #4661a3; }
+
+
+
+.track-item-enter {
+  opacity: 0;
+}
+.track-item-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+.track-item-exit {
+  opacity: 1;
+}
+.track-item-exit-active {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}

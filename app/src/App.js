@@ -5,15 +5,17 @@ import Playlists from './components/Playlists'
 import Footer from './components/Footer'
 
 import SpotifyStore from './lib/SpotifyStore'
+import PlayerStore from './lib/PlayerStore'
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.store = new SpotifyStore();
+        this.playerStore = new PlayerStore();
     }
     render() {
         return (
-        <Provider spotifyStore={this.store}>
+        <Provider spotifyStore={this.store} PlayerStore={this.PlayerStore}>
             <div className="App container">
                 <div className="row">
                     <div className="col-12 col-md-12 px-5 pt-5 text-center">
