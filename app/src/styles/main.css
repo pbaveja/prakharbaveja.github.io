@@ -4,6 +4,10 @@ body {
 	font-weight: 500;
 }
 button:focus { outline: none !important; }
+a { cursor: pointer !important; }
+a:hover { border: none !important; }
+a:focus { border: none !important; outline: none !important; text-decoration: none !important; }
+.nav-tabs .nav-link { border: none; }
 .font-regular { font-weight: 400; }
 .font-semi-bold { font-weight: 600; }
 .source-code-pro { 
@@ -109,15 +113,20 @@ button:focus { outline: none !important; }
   border: white 1px solid;
 }
 
-
+.nav-tabs { background: #4661a3;
+    border-radius: 5px; }
 .my-tabs-link:hover {
   border-color: none !important;
 }
 .my-tabs {
   margin-bottom: -1px;
-  padding: 15px;
-  min-width: 150px;
+  min-width: 90px;
   padding-bottom: 5px;
+}
+.tab-active {
+  min-width: 90px !important;
+  background: #4661a3;
+  border-radius: 5px;
 }
 
 .border-bottom-black {
