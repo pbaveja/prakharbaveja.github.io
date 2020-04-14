@@ -6,7 +6,7 @@ import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
-import { Spin } from 'antd';
+import { Row, Col, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
@@ -36,15 +36,14 @@ class Playlists extends React.Component {
   	const playlists = this.props.spotifyStore.status !== 'error' ? this.props.spotifyStore.playlists : [];
 
     return (
-      <div className='col-12 mt-1 mb-4'>
-      <div className='row justify-content-center'>
+      <Row justify='center'>
         {
           !playlists ?
           <Spin indicator={antIcon} />
           :
         	playlists.map((el) => {
         		return (
-        		<div key={el.name} className='col-12 col-sm-6 col-md-4 px-md-2'>
+                <Col key={el.name} xs={24} sm={12} md={8} className='px-2'>
                     <Playlist handleClick={this.handleClick} img={el.images[0].url} title={el.name} description={el.description} />
                     
                     <TransitionGroup className={(this.state.isOpen && el.name === this.state.playlistToOpen) && "track-list" }>
@@ -58,13 +57,11 @@ class Playlists extends React.Component {
                             </CSSTransition>
     					))}
                     </TransitionGroup>
-
-        		</div>
+                </Col>
         		)
         	})
         }
-      </div>
-      </div>
+      </Row>
     );
   }
 }

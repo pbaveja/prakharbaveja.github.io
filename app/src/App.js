@@ -42,7 +42,13 @@ class App extends React.Component {
 
                     <Row justify="center" className='mt-4'>
                         <Col span={24} className="text-center">
-                            <Tabs size='large' defaultActiveKey="1" onChange={this.handleSection}>
+                            <Tabs 
+                                size='large' 
+                                defaultActiveKey="1" 
+                                onChange={this.handleSection} 
+                                tabBarStyle={{borderBottom: 'none'}}
+                                tabBarGutter={50}
+                            >
                                 <TabPane tab="Projects" key="1">
                                   Projects here
                                 </TabPane>

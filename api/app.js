@@ -22,6 +22,7 @@ app.use('/api', indexRouter);
 app.use('/api/spotify/', spotifyRouter);
 
 app.get('/favicon.ico', (req, res) => res.status(204));
+app.get('/service-worker.js', (req, res) => res.status(204));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
