@@ -29,14 +29,18 @@ class App extends React.Component {
     render() {
         return (
         <Provider spotifyStore={this.store} PlayerStore={this.PlayerStore}>
-            <div className="App container">
-                <div className="row">
-                    <div className="col-12 col-md-12 px-5 pt-5 text-center">
-                        <img src='/avatarPrakharSmall.jpeg' className="img-fluid rounded-circle" style={{ maxWidth: '150px' }} alt='avatar'/>
-                        <Name />
-                    </div>
-                    <div className='col-12 mt-4 p-0'>
-                    <Row justify="center">
+            <Row justify='center' className='mt-5'>
+                <Col xs={24} md={20}>
+                    <Row justify='center'>
+                        <Col span={24} className='text-center'>
+                            <img src='/avatarPrakharSmall.jpeg' className="img-fluid rounded-circle" style={{ maxWidth: '150px' }} alt='avatar'/>
+                        </Col>
+                        <Col span={24}>
+                            <Name />
+                        </Col>
+                    </Row>
+
+                    <Row justify="center" className='mt-4'>
                         <Col span={24} className="text-center">
                             <Tabs size='large' defaultActiveKey="1" onChange={this.handleSection}>
                                 <TabPane tab="Projects" key="1">
@@ -51,11 +55,9 @@ class App extends React.Component {
                             </Tabs>
                         </Col>
                     </Row>
-                    </div>
+                </Col>
+            </Row>
 
-                </div>
-
-            </div>
             {/* <Footer/> */}
         </Provider>
         );

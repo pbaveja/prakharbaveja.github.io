@@ -36,7 +36,7 @@ class Playlists extends React.Component {
   	const playlists = this.props.spotifyStore.status !== 'error' ? this.props.spotifyStore.playlists : [];
 
     return (
-      <div className='col-12 mt-1 my-4'>
+      <div className='col-12 mt-1 mb-4'>
       <div className='row justify-content-center'>
         {
           !playlists ?
