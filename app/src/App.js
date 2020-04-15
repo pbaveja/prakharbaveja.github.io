@@ -2,6 +2,8 @@ import React from 'react';
 import { Provider } from 'mobx-react';
 import Name from './components/Name'
 import Playlists from './components/Playlists'
+import Projects from './components/Projects'
+import ContactInfo from './components/ContactInfo'
 import Footer from './components/Footer'
 import { Row, Col, Tabs } from 'antd';
 import SpotifyStore from './lib/SpotifyStore'
@@ -29,7 +31,7 @@ class App extends React.Component {
     render() {
         return (
         <Provider spotifyStore={this.store} PlayerStore={this.PlayerStore}>
-            <Row justify='center' className='mt-5'>
+            <Row justify='center' className='my-5'>
                 <Col xs={24} md={20}>
                     <Row justify='center'>
                         <Col span={24} className='text-center'>
@@ -43,20 +45,20 @@ class App extends React.Component {
                     <Row justify="center" className='mt-4'>
                         <Col span={24} className="text-center">
                             <Tabs 
-                                size='large' 
-                                defaultActiveKey="1" 
-                                onChange={this.handleSection} 
-                                tabBarStyle={{borderBottom: 'none'}}
-                                tabBarGutter={50}
+                            size='large' 
+                            defaultActiveKey="1" 
+                            onChange={this.handleSection} 
+                            tabBarStyle={{borderBottom: 'none'}}
+                            tabBarGutter={50}
                             >
                                 <TabPane tab="Projects" key="1">
-                                  Projects here
+                                  <Row justify='start'> <Projects /> </Row>
                                 </TabPane>
                                 <TabPane tab="Spotify x Me" key="2">
                                   <Playlists />
                                 </TabPane>
                                 <TabPane tab="Contact" key="3">
-                                  Contact info here
+                                  <ContactInfo />
                                 </TabPane>
                             </Tabs>
                         </Col>
