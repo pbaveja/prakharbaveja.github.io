@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
 
+require('dotenv').config()
+
 var indexRouter = require('./routes/index');
 var spotifyRouter = require('./routes/spotify');
 
@@ -16,13 +18,17 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
+// Server react build statically
+app.use(express.static(path.join(__dirname, '../app/build')));
+
 
 app.use('/api', indexRouter);
 app.use('/api/spotify/', spotifyRouter);
 
 app.get('/favicon.ico', (req, res) => res.status(204));
 app.get('/service-worker.js', (req, res) => res.status(204));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

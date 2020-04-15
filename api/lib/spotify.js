@@ -1,8 +1,8 @@
 var SpotifyWebApi = require('spotify-web-api-node');
 var spotifyApi = new SpotifyWebApi();
 
-var clientId = '',
-clientSecret = '';
+var clientId = process.env.SPOTIFY_CLIENT_ID,
+clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 
 // Create the api object with the credentials
 var spotifyApi = new SpotifyWebApi({
