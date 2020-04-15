@@ -66,7 +66,7 @@ class App extends React.Component {
                 </Col>
             </Row>
 
-            {/* <Footer/> */}
+            <Footer/>
         </Provider>
         );
     }

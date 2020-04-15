@@ -119,9 +119,9 @@ function Projects(props) {
 
 	return projects.map(project => {
 			let avatar = '';
-			if (project.title == 'HTML5 Asteroid Game') {
+			if (project.title === 'HTML5 Asteroid Game') {
 				avatar = <RocketOutlined style={{ fontSize: '25px'}}/>;
-			} else if (project.title == 'XML Parser and Podcast Episode Downloader') {
+			} else if (project.title === 'XML Parser and Podcast Episode Downloader') {
 				avatar = <DownSquareOutlined style={{ fontSize: '25px'}}/>;
 			} else if (project.logo) {
 				avatar = <Avatar src={project.logo} />;

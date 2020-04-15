@@ -2,22 +2,22 @@ import React from 'react';
 import Icon from '@ant-design/icons';
 
 const LaravelSvg = () => (
-  <img src='https://laravel.com/img/logomark.min.svg' width='15'/>
+  <img alt='laravel' src='https://laravel.com/img/logomark.min.svg' width='15'/>
 );
 const NodeJSSvg = () => (
-  <img src='/images/nodejs.png' width='15'/>
+  <img alt='nodejs' src='/images/nodejs.png' width='15'/>
 );
 const JavaScriptSvg = () => (
-  <img src='/images/javascript.svg' width='15'/>
+  <img alt='js' src='/images/javascript.svg' width='15'/>
 );
 const ReactSvg = () => (
-  <img src='/images/reactjs.svg' width='15'/>
+  <img alt='react' src='/images/reactjs.svg' width='15'/>
 );
 const NextJSSvg = () => (
-  <img src='https://nextjs.org/static/favicon/favicon-32x32.png' width='15'/>
+  <img alt='next' src='https://nextjs.org/static/favicon/favicon-32x32.png' width='15'/>
 );
 const MySQLSvg = () => (
-  <img src='/images/mysql.png' width='15'/>
+  <img alt='mysql' src='/images/mysql.png' width='15'/>
 );
 
 const LaravelIcon = props => <Icon component={LaravelSvg} {...props} />;

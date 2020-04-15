@@ -1,8 +1,6 @@
 import { observable, action, decorate } from 'mobx';
 
 class PlayerStore {
-	constructor() {
-	}
     playerState = {
 	    url: null,
 	    playing: false,

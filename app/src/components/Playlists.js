@@ -1,11 +1,6 @@
 import React from "react";
 import { inject, observer } from "mobx-react";
 import Playlist from './Playlist';
-import Track from './Track';
-import {
-  CSSTransition,
-  TransitionGroup,
-} from 'react-transition-group';
 import { Row, Col, Spin, List, Avatar } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 
