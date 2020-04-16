@@ -4,6 +4,7 @@ const nextJSColor = '#000000';
 const mySQLColor = '#4479a1';
 const javascriptColor = '#323330';
 const nodeJSColor = '#323330';
+const mongoDBColor = '#323330';
 
 export {
 	laravelColor,
@@ -11,5 +12,6 @@ export {
 	nextJSColor,
 	mySQLColor,
 	javascriptColor,
-	nodeJSColor
+	nodeJSColor,
+	mongoDBColor
 }

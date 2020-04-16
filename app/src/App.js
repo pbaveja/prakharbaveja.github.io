@@ -4,6 +4,7 @@ import Name from './components/Name'
 import Playlists from './components/Playlists'
 import Projects from './components/Projects'
 import ContactInfo from './components/ContactInfo'
+import Player from './components/Player'
 import Footer from './components/Footer'
 import { Row, Col, Tabs } from 'antd';
 import SpotifyStore from './lib/SpotifyStore'
@@ -30,7 +31,7 @@ class App extends React.Component {
 
     render() {
         return (
-        <Provider spotifyStore={this.store} PlayerStore={this.PlayerStore}>
+        <Provider spotifyStore={this.store} playerStore={this.playerStore}>
             <Row justify='center' className='my-5'>
                 <Col xs={24} md={20}>
                     <Row justify='center'>
@@ -66,6 +67,7 @@ class App extends React.Component {
                 </Col>
             </Row>
 
+            <Player />
             <Footer/>
         </Provider>
         );

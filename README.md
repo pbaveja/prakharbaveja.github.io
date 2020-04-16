@@ -11,7 +11,7 @@ This has been done by integrating [Spotify's API](https://developer.spotify.com/
 - [Redis](https://www.npmjs.com/package/redis)
 
 ##### Frontend
-- [React]([http://reactjs.org/](http://reactjs.org/)) (CRA)
+- [React]([http://reactjs.org/](http://reactjs.org/) (CRA)
 - [Mobx](https://mobx.js.org/README.html) for state management
 - [Ant Design](https://ant.design/)
 - [LESS](http://lesscss.org/)

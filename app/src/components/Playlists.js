@@ -1,7 +1,8 @@
 import React from "react";
 import { inject, observer } from "mobx-react";
 import Playlist from './Playlist';
-import { Row, Col, Spin, List, Avatar } from 'antd';
+import Tracks from './Tracks';
+import { Row, Col, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
@@ -27,11 +28,22 @@ class Playlists extends React.Component {
   handleClick = (title) => {
     this.setState({ isOpen: !this.state.isOpen, playlistToOpen: title })
   }
+
   render() {
   	const playlists = this.props.spotifyStore.status !== 'error' ? this.props.spotifyStore.playlists : [];
 
     return (
       <Row justify='center my-3'>
+        { playlists &&
+            <Col span={24}>
+            <p className='text-md'>Here are a few playlists of mine from <a href='https://developer.spotify.com/documentation/web-api/' target='_blank'>
+            Spotify's API.</a><br/>
+            </p>
+            <p className='text-md'>This is using ExpressJS as the backend framework, and Redis for caching the playlist data.<br/>
+            For the frontend, Mobx is used for state management. You can check out the source code for this website <a href='https://github.com/pbaveja/prakharbaveja.github.io' target='blank'>here.</a>
+            </p>
+            </Col>
+        } 
         {
           !playlists ?
           <Spin indicator={antIcon} />
@@ -41,22 +53,7 @@ class Playlists extends React.Component {
                 <Col key={el.name} xs={24} sm={12} md={8} className='px-2'>
                     <Playlist handleClick={this.handleClick} img={el.images[0].url} title={el.name} description={el.description} />
 					{(this.state.isOpen && el.name === this.state.playlistToOpen) && 
-                        <List
-                            className="playlist-track text-left mt-1"
-                            itemLayout="horizontal"
-                            dataSource={el.tracks.items}
-                            renderItem={item => (
-                              <List.Item>
-                                <List.Item.Meta
-                                    className='align-items-center'
-                                    avatar={<Avatar src={item.track.album.images[0].url} />}
-                                    title={<span>{item.track.name}</span>}
-                                    description={item.track.artists[0].name}
-                                />
-                              <button className='track-play-btn'><i className='fas fa-play text-gray'></i></button>
-                              </List.Item>
-                        )}
-                      />
+                        <Tracks el={el} handlePlay={this.handlePlay}/>   
 				    }
                 </Col>
         		)

@@ -20,6 +20,17 @@ a:focus { border: none !important; outline: none !important; text-decoration: no
   border-radius: 20px;
 }
 
+.ant-slider-handle { transition: 1.5s ease all !important; }
+.ant-slider-track { transition: 1.5s ease all !important; }
+.ant-slider-handle { 
+  width: 10px !important;
+  height: 10px !important;
+  margin-top: -3px !important;
+  border: none !important;
+  background: #4661a3 !important;
+}
+.ant-slider-track { background: #4661a3; }
+.ant-slider-rail { background: #DDD; }
 .nav-tabs .nav-link { border: none; }
 .font-regular { font-weight: 400; }
 .font-semi-bold { font-weight: 600; }
@@ -146,12 +157,14 @@ a:focus { border: none !important; outline: none !important; text-decoration: no
   border-bottom: 2px solid black;
 }
 
-
+.text-md { font-size: 16px; }
 .text-sm { font-size: 12px; }
 .text-gray { color: #DDD; }
+.text-player-gray { color: #7E7E7E; }
 .text-blue { color: #4661a3; }
 .text-dark-gray { color: #343434 !important; }
 
+.track-playing { background: red; }
 .track-list {
   box-shadow: inset 0px 6px 17px -8px #dbdbdb;
   padding: 10px;
@@ -171,4 +184,16 @@ a:focus { border: none !important; outline: none !important; text-decoration: no
 .track-item-exit-active {
   opacity: 0;
   transition: opacity 250ms ease-in;
+}
+
+
+.player-icon { 
+  color: #4661a3;
+  font-size: 30px;
+}
+.player-close {
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  padding: 10px;
 }

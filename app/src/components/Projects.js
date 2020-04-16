@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Card, Avatar, Tag } from 'antd';
-import { LaravelIcon, NodeJSIcon, JavaScriptIcon, ReactIcon, NextJSIcon, MySQLIcon } from './MyIcons/TechnologyIcons';
-import { laravelColor, reactJSColor, nextJSColor, mySQLColor, javascriptColor, nodeJSColor } from './MyIcons/technologyColors';
+import { LaravelIcon, NodeJSIcon, JavaScriptIcon, ReactIcon, NextJSIcon, MySQLIcon, MongoDBIcon } from './MyIcons/TechnologyIcons';
+import { laravelColor, reactJSColor, nextJSColor, mySQLColor, javascriptColor, nodeJSColor, mongoDBColor } from './MyIcons/technologyColors';
 import { MailOutlined, RocketOutlined, DownSquareOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
@@ -47,6 +47,12 @@ function Projects(props) {
 			technologyTags: [
 			    <Tag style={{color: nodeJSColor }} className='rounded-tag'>
 			    	<NodeJSIcon style={{verticalAlign: 'middle'}} /> NodeJS
+			    </Tag>,
+			    <Tag style={{color: mongoDBColor }} className='rounded-tag'>
+			    	<MongoDBIcon style={{verticalAlign: 'middle'}} /> MongoDB
+			    </Tag>,
+			    <Tag style={{color: reactJSColor }} className='rounded-tag'>
+			    	<ReactIcon style={{verticalAlign: 'middle'}}/> ReactJS
 			    </Tag>
 			]
 		},
@@ -72,9 +78,6 @@ function Projects(props) {
 			logo: '/images/enhans.jpg',
 			link: 'https://enhans.co.in/',
 			technologyTags: [
-			    <Tag style={{color: nodeJSColor }} className='rounded-tag'>
-			    	<NodeJSIcon style={{verticalAlign: 'middle'}} /> NodeJS
-			    </Tag>,
 			    <Tag style={{color: reactJSColor }} className='rounded-tag'>
 			    	<ReactIcon style={{verticalAlign: 'middle'}}/> ReactJS
 			    </Tag>,
@@ -147,9 +150,9 @@ function Projects(props) {
 					    />
 					    <br/>
 
-					    <div className='text-left'>
+					    <div className='d-flex text-left'>
 					    { project.technologyTags.map(tag => {
-					    	return tag
+					    	return <div className='mt-1'>{tag}</div>
 					    }) }
 					    </div>
 					</Card>
