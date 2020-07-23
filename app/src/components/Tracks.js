@@ -18,6 +18,7 @@ class Tracks extends React.Component {
 	render() {
 		const playerState = this.props.playerStore.playerState;
 		console.log(playerState.trackData.name);
+		console.log(JSON.parse(JSON.stringify(this.props.el.tracks.items[0].track)));
 		return (
 			<List
 	            className="playlist-track text-left mt-1"

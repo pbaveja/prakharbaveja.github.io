@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player'
 import { inject, observer } from 'mobx-react'
 import { Slider, Col, Row } from 'antd';
 import { StepBackwardFilled, PauseCircleFilled, PlayCircleFilled, StepForwardFilled, CloseOutlined } from '@ant-design/icons';
+import Waveform from './Waveform/waveform';
 
 @inject('playerStore')
 @observer
@@ -11,8 +12,20 @@ class Player extends React.Component {
 		const currentPlayerProps = this.props.playerStore;
 		const playerState = this.props.playerStore.playerState;
 		return (
-			<div>
-				{ playerState.playerActive &&
+			<div className='player' style={{
+				position: 'fixed', 
+				bottom: 0, 
+				height: '90px', 
+				width: '100%', 
+				background: '#ffffffbf', 
+				boxShadow: '0px 30px 40px #eee', 
+				backdropFilter: 'blur(5px)',
+				zIndex: '10'
+			}}>
+				
+				<Waveform />
+
+				{/* playerState.playerActive &&
 				<div className='player' style={{position: 'fixed', bottom: 0, height: '90px', width: '100%', background: '#ffffffbf', boxShadow: '0px 30px 40px #eee', backdropFilter: 'blur(5px)'}}>
 		        	<Row justify='center'>
 		        		<CloseOutlined onClick={currentPlayerProps.handleStop} className='player-icon player-close' style={{zIndex: '100'}}/>
@@ -39,19 +52,10 @@ class Player extends React.Component {
 				        	<span className='text-sm text-player-gray text-left px-2 ' style={{width:'10%'}}>{playerState.loadedSeconds.toFixed()}</span>
 			        	</Col>
 		        	</Row>
-
-					{/*<Row justify='center' className='mt-3'>
-				        <Col xs={2} md={4} className='px-1 text-right'>
-				        </Col>
-				        <Col xs={20} md={16} className='px-1 text-center'>
-				        </Col>
-				        <Col xs={2} md={4} className='px-1 text-left'>
-				        </Col>
-			        </Row>*/}
 				</div>
 				}
 
-				<div className='d-none'>
+				{/*<div className='d-none'>
 					<ReactPlayer
 						ref={this.props.playerStore.ref}
 						className='react-player'
@@ -73,7 +77,7 @@ class Player extends React.Component {
 						onProgress={this.props.playerStore.handleProgress}
 						onDuration={this.props.playerStore.handleDuration}
 					/>
-				</div>
+				</div>*/}
 			</div>
 		)
 	}
