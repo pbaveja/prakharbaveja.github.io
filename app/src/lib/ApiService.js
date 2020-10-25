@@ -5,7 +5,8 @@ class ApiService {
         const options = {
             method: "GET",
         }
-        const request = new Request(webApiUrl+endpoint + "?" + urlParams, options);
+        // URLSearchParams object available in urlParams
+        const request = new Request(webApiUrl+endpoint, options);
         const response = await fetch(request);
         return response.json();
     }
