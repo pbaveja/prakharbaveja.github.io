@@ -1,0 +1,11 @@
+{
+	"title": "Enhans",
+	"description": "Made the porfolio website for the Enhans project that is a collaboration between 8 students from Srishti School of Art, Design and Technology and NIMHANS, dealing with doctor patient communication",
+	"cover": "/images/enhans-cover.png",
+	"logo": "/images/enhans.jpg",
+	"link": "https://enhans.co.in/",
+	"technologyTags": [
+		"ReactJS",
+		"NextJS"
+	]
+}

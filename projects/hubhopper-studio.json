@@ -1,0 +1,12 @@
+{
+	"title": "Hubhopper Studio",
+	"description": "A podcast hosting platform catered for the Indian creators, handling creation, RSS generation, distribution and anlytics all under one roof.",
+	"cover": "/images/hh-studio.png",
+	"logo": "https://files.hubhopper.com/podcast/12854/hubhopper-studio.jpg",
+	"link": "https://studio.hubhopper.com",
+	"technologyTags": [
+		"Laravel",
+		"ReactJS",
+		"MySQL"
+	]
+}

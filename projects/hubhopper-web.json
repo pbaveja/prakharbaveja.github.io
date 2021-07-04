@@ -1,0 +1,11 @@
+{
+	"title": "Hubhopper Web",
+	"description": "A podcast consumption web app catered for India. Showcasing featured, popular and upcoming podcasts. Hubhopper is india\"s largest podcast directory with over 50 milion hours of content.",
+	"cover": "/images/hh-web.png",
+	"logo": "https://hubhopper.com/static/favicon.ico",
+	"link": "https://hubhopper.com",
+	"technologyTags": [
+		"NodeJS",
+		"ReactJS"
+	]
+}

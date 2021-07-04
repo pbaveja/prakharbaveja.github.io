@@ -1,0 +1,12 @@
+{
+	"title": "Boilerplate MERN stack app for SAAS products.",
+	"description": "Contributed to the open source project used for SAAS platforms having the need for ACL permissions with teams/users. Using the MERN stack with NextJS.",
+	"link": "https://saas-app.builderbook.org/login",
+	"logo": "https://storage.googleapis.com/async-await/async-favicon32.png",
+	"cover": "https://user-images.githubusercontent.com/26158226/61417515-2891dd00-a8ac-11e9-9c08-0d1adef43c5b.png",
+	"technologyTags": [
+		"NodeJS",
+		"MongoDB",
+		"ReactJS"
+	]
+}

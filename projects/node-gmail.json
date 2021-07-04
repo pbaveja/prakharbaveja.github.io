@@ -1,0 +1,8 @@
+{
+	"title": "Node Gmail",
+	"description": "NodeJS script for all things email. Drafting, sending, listing. Integrated with the googleapis. And mail templating with nodemailer",
+	"link": "https://github.com/pbaveja/node-gmail",
+	"technologyTags": [
+		"NodeJS"
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"title": "XML Parser and Podcast Episode Downloader",
+	"description": "NodeJS script for parsing an RSS into JSON and downloading all it\"s episodes into a folder. Displays progress and uses promises to avoid concurrent HTTP connections errors.",
+	"link": "https://github.com/pbaveja/node-rss-parse-download",
+	"technologyTags": [
+		"NodeJS"
+	]
+}
