@@ -3,67 +3,41 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
-import Feed from '../components/Feed';
+import Projects from '../components/Projects';
 import Page from '../components/Page';
-import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
-import type { PageContext, AllMarkdownRemark } from '../types';
+import type { AllProjectsJson } from '../types';
 
 type Props = {
-  data: AllMarkdownRemark,
-  pageContext: PageContext
+  data: AllProjectsJson
 };
 
-const IndexTemplate = ({ data, pageContext }: Props) => {
+const IndexTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
-  const {
-    currentPage,
-    hasNextPage,
-    hasPrevPage,
-    prevPagePath,
-    nextPagePath
-  } = pageContext;
-
-  const { edges } = data.allMarkdownRemark;
-  const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+  const { edges } = data.allProjectsJson;
 
   return (
-    <Layout title={pageTitle} description={siteSubtitle}>
+    <Layout title={siteTitle} description={siteSubtitle}>
       <Sidebar isIndex />
       <Page>
-        <Feed edges={edges} />
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
-        />
+        <Projects edges={edges} />
       </Page>
     </Layout>
   );
 };
 
 export const query = graphql`
-  query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
-    allMarkdownRemark(
-        limit: $postsLimit,
-        skip: $postsOffset,
-        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } },
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ){
+  query IndexTemplate {
+    allProjectsJson {
+      totalCount
       edges {
         node {
-          fields {
-            slug
-            categorySlug
-          }
-          frontmatter {
-            title
-            date
-            category
-            description
-          }
+          id
+          link
+          logo
+          technologyTags
+          title
         }
       }
     }

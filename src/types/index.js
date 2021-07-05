@@ -59,3 +59,29 @@ export type AllMarkdownRemark = {
 };
 
 export type MarkdownRemark = Node;
+
+export type ProjectNode = {
+  id: string,
+  title: string,
+  link: string,
+  logo: string,
+  technologyTags: string[]
+};
+
+export type ProjectEdge = {
+  node: ProjectNode
+};
+
+export type ProjectEdges = Array<ProjectEdge>;
+
+export type AllProjectsJson = {
+  allProjectsJson: {
+    edges: Edges,
+  },
+  group: {
+    fieldValue: string,
+    totalCount: number
+  }[]
+};
+
+export type AllProjectsJson = Node;

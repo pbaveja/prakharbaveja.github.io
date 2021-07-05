@@ -2,13 +2,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { StaticQuery, useStaticQuery } from 'gatsby';
-import IndexTemplate from './index-template';
+import BlogTemplate from './blog-template';
 import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
 import pageContext from '../../jest/__fixtures__/page-context';
 import type { RenderCallback } from '../types';
 
-describe('IndexTemplate', () => {
+describe('BlogTemplate', () => {
   const props = {
     data: {
       ...allMarkdownRemark
@@ -26,7 +26,7 @@ describe('IndexTemplate', () => {
   });
 
   it('renders correctly', () => {
-    const tree = renderer.create(<IndexTemplate {...props} />).toJSON();
+    const tree = renderer.create(<BlogTemplate {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

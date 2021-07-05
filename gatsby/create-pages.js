@@ -9,10 +9,10 @@ const createPostsPages = require('./pagination/create-posts-pages.js');
 const createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  // Projects page
+  // Index / Projects page
   createPage({
-    path: '/projects',
-    component: path.resolve('./src/templates/not-found-template.js')
+    path: '/',
+    component: path.resolve('./src/templates/index-template.js')
   });
 
   // 404

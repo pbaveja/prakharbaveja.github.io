@@ -16,8 +16,8 @@ module.exports = {
       path: '/'
     },
     {
-      label: 'Articles',
-      path: '/'
+      label: 'Blog',
+      path: '/blog'
     },
     {
       label: 'Spotify x Me',
