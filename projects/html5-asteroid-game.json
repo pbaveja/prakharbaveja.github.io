@@ -2,7 +2,7 @@
 	"title": "HTML5 Asteroid Game",
 	"description": "Recreating the retro Asteroid game in HTML5 and JS. Intially developed by Atari.",
 	"link": "https://pbaveja.github.io/HTML5-Asteroid-Game/",
-	"cover": "/images/asteroids.png",
+	"cover": "https://prakharbaveja.com/images/asteroids.png",
 	"logo": "",
 	"technologyTags": [
 		"JavaScript"

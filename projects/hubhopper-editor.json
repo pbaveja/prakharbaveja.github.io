@@ -1,8 +1,8 @@
 {
 	"title": "Hubhopper Editor",
 	"description": "Feature rich browser based audio editor where you can import, record, trim, split, fade in/out and a lot more. Inspired by the demand for easy audio manipulation.",
-	"cover": "/images/hh-audio-editor.png",
-	"logo": "/images/hh-editor-logo.png",
+	"cover": "https://prakharbaveja.com/images/hh-audio-editor.png",
+	"logo": "https://prakharbaveja.com/images/hh-editor-logo.png",
 	"link": "https://studio.hubhopper.com/editor",
 	"technologyTags": [
 		"JavaScript"

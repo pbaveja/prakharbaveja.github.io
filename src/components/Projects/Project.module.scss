@@ -2,6 +2,78 @@
 @import '../../assets/scss/mixins';
 
 .project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  &__card {
+    &-link {
+      padding-right: 15px;
+    } 
+  }
+
+  &__icon {
+    font-size: .9rem;
+    display: inline-flex;
+    background: #D8D8D8;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    span {
+      border-radius: 5px;
+      padding: 3px 5px;
+    };
+  }
+
+  &__react {
+    background: #BAD5F5;
+    span::after {
+      content: "React.js";
+    }
+  }
+
+  &__express {
+    background: #F2C986;
+    span::after {
+      content: "Express";
+    }
+  }
+
+  &__node {
+    background: #E1C1C1;
+    span::after {
+      content: "Node.js";
+    }
+  }
+
+  &__python {
+    background: #EADD86;
+    span::after {
+      content: "Python";
+    }
+  }
+
+  &__django {
+    background: #AFEAE5;
+    span::after {
+      content: "Django";
+    }
+  }
+
+  &__github {
+    color: #739150;
+  }
+
+  &__status {
+    color: #7699C2;
+  }
+}
+
+.blog-project {
   &__item {
     @include margin-bottom(1.25);
 

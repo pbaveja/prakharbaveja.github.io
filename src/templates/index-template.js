@@ -38,6 +38,7 @@ export const query = graphql`
           logo
           technologyTags
           title
+          cover
         }
       }
     }
