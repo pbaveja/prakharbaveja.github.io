@@ -6,5 +6,6 @@
 	"link": "https://studio.hubhopper.com/editor",
 	"technologyTags": [
 		"JavaScript"
-	]
+	],
+	"order": 2
 }

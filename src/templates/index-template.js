@@ -29,7 +29,7 @@ const IndexTemplate = ({ data }: Props) => {
 
 export const query = graphql`
   query IndexTemplate {
-    allProjectsJson {
+    allProjectsJson(sort: {fields: order}) {
       totalCount
       edges {
         node {

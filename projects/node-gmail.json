@@ -4,5 +4,6 @@
 	"link": "https://github.com/pbaveja/node-gmail",
 	"technologyTags": [
 		"NodeJS"
-	]
+	],
+	"order": 7
 }

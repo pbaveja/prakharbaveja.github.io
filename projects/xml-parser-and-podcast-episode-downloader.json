@@ -4,5 +4,6 @@
 	"link": "https://github.com/pbaveja/node-rss-parse-download",
 	"technologyTags": [
 		"NodeJS"
-	]
+	],
+	"order": 8
 }

@@ -8,5 +8,6 @@
 		"Laravel",
 		"ReactJS",
 		"MySQL"
-	]
+	],
+	"order": 1
 }

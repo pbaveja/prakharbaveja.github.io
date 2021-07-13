@@ -15,13 +15,14 @@ socialImage: "/media/image-2.jpg"
 
 # Automating a Python Script on Linux — Ubuntu/CentOS
 
-Photo by Shahadat Rahman on Unsplash
+![Coding](https://miro.medium.com/max/1400/0*7tA4M6pN23uWULKf)Photo by Shahadat Rahman on Unsplash
 
 This is a tutorial for the beginners out there.
 
 We’re going to see a few ways to automate a python script in the background on Linux.
 
-*At some point in our developer lives, we are bound to come across a situation where we need to automate single/multiple scripts to finish up a task for us.*
+## *At some point in our developer lives, we are bound to come across a situation where we need to automate single/multiple scripts to finish up a task for us.*
+
 
 I recently came across a task where there was a bunch of duplicate data that had to be fixed. I made a python script to handle the process of identifying the duplication, manipulating it and deleting it accordingly. But this was done on a small data-set within a local environment.
 

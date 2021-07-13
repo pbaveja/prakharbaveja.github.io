@@ -1,14 +1,63 @@
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background: white;
+  box-shadow: 0 0px 15px 0 rgba(0,0,0,0.06);
   transition: 0.3s;
   margin: 10px;
   border-radius: 6px;
+  position: relative;
+}
+.card-reveal {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    overflow-y: auto;
+    left: 0;
+    top: 100%;
+    transform: translateY(-100%);
+    height: 0px;
+    z-index: 0;
+    opacity: 1;
+    // overflow-y: hidden;
+    transition: 0.3s ease all;
+}
+.reveal {
+	opacity: 1;
+	z-index: 3;
+	height: 100%;
+}
+.card-reveal::-webkit-scrollbar {
+  width: 1px;
+}
+ 
+.card-reveal::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.card-reveal::-webkit-scrollbar-thumb {
+  background-color: #646464;
+  outline: 1px solid #646464;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+.card-reveal-box {
+  display: flex;
+  padding: 1em;
+}
 
 .container {
   padding: 2px 16px;
+}
+.title_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  width: 100%
+}
+.title {
+	font-weight: bold;
+}
+.pointer {
+	cursor: pointer;
 }
