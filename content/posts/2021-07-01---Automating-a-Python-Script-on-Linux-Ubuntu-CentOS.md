@@ -10,7 +10,7 @@ tags:
   - "Automation"
   - "Linux"
 description: "Sample text"
-socialImage: "/media/image-2.jpg"
+socialImage: "/photo.jpg"
 ---
 
 # Automating a Python Script on Linux — Ubuntu/CentOS

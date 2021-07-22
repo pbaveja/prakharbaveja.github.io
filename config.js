@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       label: 'Spotify x Me',
-      path: '/pages/about'
+      path: '/pages/spotifyxme'
     },
     {
       label: 'Contact',
